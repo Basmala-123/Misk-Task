@@ -1,0 +1,68 @@
+@import '/src/assets/styles/app.scss';
+
+/* Social icons */
+.social-icons i {
+    background-color: $mainColor;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/* Top bar */
+.top-bar {
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+/* Top item navigation */
+.top-item li > a {
+    margin: 0 8px;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Navigation */
+nav {
+    .logo {
+        width: 100px;
+    }
+    .nav-link {
+        font-weight: 500;
+        &:hover,
+        &:active {
+            color: $mainColor;
+            cursor: pointer;
+        }
+    }
+    .training ,.logIn{
+        background-color: $mainColor;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 0 20px;
+        text-decoration: none;
+        
+        &:hover{
+            color: #fff;
+        }
+    }
+
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    
+
+    /* Active link */
+    .activeLink {
+        color: $mainColor;
+    }
+}
+
+@media screen and (max-width : 600px){
+   
+    .top-item li > a {
+        color: #000;
+    }
+}

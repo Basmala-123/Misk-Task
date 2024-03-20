@@ -1,0 +1,107 @@
+@import '/src/assets/styles/app.scss';
+
+main{
+    .intro{
+        color: $darkGray;
+        span{
+            color: $secondColor;
+            font-size: 20px;
+        }
+        p{
+            line-height: 2;
+        }
+    }
+    .main-form-container{
+        margin-bottom: 10px;
+        .form-control{
+            border-radius: 0 20px 20px 0;
+            padding: 16px 0;
+            &:focus{
+                box-shadow: none;
+            }
+            &::placeholder{
+                padding-right: 30px;
+            }
+        }
+        .form-select{
+            border-radius:0 ;
+            border-right: 0;
+            background-position: left 0.75rem center;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .serachIcon{
+            right: 10px;
+            top: 22px;
+            color: gray;
+        }
+        .category-icon{
+            left: 53%;
+            top: 20px;
+            color: $darkGray;
+        }
+   
+        .btn{
+            border: 1px solid transparent;
+            width: 150px;
+            background-color: $mainColor;
+            padding: 15px 5px;
+            border-radius:  20px 0 0 20px;
+            color: #fff;
+        }
+
+
+    }
+    .videoPlay{
+        background-color: $mainColor;
+        color: #fff;
+        width: 100px;
+        height: 100px;
+        border-radius:50% ;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: .5;
+        position: absolute;
+        left: 40%;
+        top: 40%;
+    }
+    .img-background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        z-index: -1;
+        img{
+            height: 600px;
+            object-fit: cover;
+        border-radius: 0% 100% 35% 120%/73% 25% 75% 27% ;
+    
+           
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px ;
+            z-index: -1;
+            background: #206387;
+            height: 260px;
+            width: 50%;
+            border-radius: 0% 100% 20% 80% / 74% 62% 38% 26% ;  
+        }
+    
+    }
+}
+
+@media screen and (max-width : 600px){
+    main .img-background{
+        top: auto;
+    }
+    .videoPlay{
+        opacity: 0 !important;
+    }
+  
+}
